@@ -16,4 +16,8 @@ jobs:
           java-version: '17'
 
       - name: Build Application
-        uses: mvn clean package
+        uses: ./mvnw clean package
+
+      - name: Build Docker Image
+        run: docker build -t ci-cd.
+
